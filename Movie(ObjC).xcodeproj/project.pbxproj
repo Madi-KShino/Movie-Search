@@ -12,6 +12,11 @@
 		53D0C42B22CF9E2E00D42E5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53D0C42A22CF9E2E00D42E5A /* Assets.xcassets */; };
 		53D0C42E22CF9E2E00D42E5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D0C42C22CF9E2E00D42E5A /* LaunchScreen.storyboard */; };
 		53D0C43122CF9E2E00D42E5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D0C43022CF9E2E00D42E5A /* main.m */; };
+		53D0C43E22CFA20C00D42E5A /* MKSMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D0C43D22CFA20C00D42E5A /* MKSMovie.m */; };
+		53D0C44122CFA8C000D42E5A /* MKSMovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53D0C44022CFA8C000D42E5A /* MKSMovieController.m */; };
+		53D0C44422CFB2DE00D42E5A /* MovieListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D0C44322CFB2DE00D42E5A /* MovieListTableViewController.swift */; };
+		53D0C44622CFB62A00D42E5A /* MovieTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D0C44522CFB62A00D42E5A /* MovieTVCell.swift */; };
+		53D0C44822CFB85400D42E5A /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D0C44722CFB85400D42E5A /* MovieDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,14 @@
 		53D0C42D22CF9E2E00D42E5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53D0C42F22CF9E2E00D42E5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53D0C43022CF9E2E00D42E5A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		53D0C43C22CFA20C00D42E5A /* MKSMovie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKSMovie.h; sourceTree = "<group>"; };
+		53D0C43D22CFA20C00D42E5A /* MKSMovie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKSMovie.m; sourceTree = "<group>"; };
+		53D0C43F22CFA8C000D42E5A /* MKSMovieController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKSMovieController.h; sourceTree = "<group>"; };
+		53D0C44022CFA8C000D42E5A /* MKSMovieController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKSMovieController.m; sourceTree = "<group>"; };
+		53D0C44222CFB2DE00D42E5A /* Movie(ObjC)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Movie(ObjC)-Bridging-Header.h"; sourceTree = "<group>"; };
+		53D0C44322CFB2DE00D42E5A /* MovieListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewController.swift; sourceTree = "<group>"; };
+		53D0C44522CFB62A00D42E5A /* MovieTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTVCell.swift; sourceTree = "<group>"; };
+		53D0C44722CFB85400D42E5A /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +93,10 @@
 		53D0C43822CF9E5100D42E5A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				53D0C44322CFB2DE00D42E5A /* MovieListTableViewController.swift */,
+				53D0C44222CFB2DE00D42E5A /* Movie(ObjC)-Bridging-Header.h */,
+				53D0C44522CFB62A00D42E5A /* MovieTVCell.swift */,
+				53D0C44722CFB85400D42E5A /* MovieDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -87,6 +104,8 @@
 		53D0C43922CF9E5B00D42E5A /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				53D0C43F22CFA8C000D42E5A /* MKSMovieController.h */,
+				53D0C44022CFA8C000D42E5A /* MKSMovieController.m */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -94,6 +113,8 @@
 		53D0C43A22CF9E6400D42E5A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				53D0C43C22CFA20C00D42E5A /* MKSMovie.h */,
+				53D0C43D22CFA20C00D42E5A /* MKSMovie.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,11 +153,13 @@
 		53D0C41622CF9E2E00D42E5A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MKS;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Madi S";
 				TargetAttributes = {
 					53D0C41D22CF9E2E00D42E5A = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -177,7 +200,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				53D0C43122CF9E2E00D42E5A /* main.m in Sources */,
+				53D0C43E22CFA20C00D42E5A /* MKSMovie.m in Sources */,
+				53D0C44622CFB62A00D42E5A /* MovieTVCell.swift in Sources */,
+				53D0C44122CFA8C000D42E5A /* MKSMovieController.m in Sources */,
+				53D0C44822CFB85400D42E5A /* MovieDetailViewController.swift in Sources */,
 				53D0C42322CF9E2E00D42E5A /* AppDelegate.m in Sources */,
+				53D0C44422CFB2DE00D42E5A /* MovieListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +347,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8MJ3MC3A9A;
 				INFOPLIST_FILE = "$(SRCROOT)/Movie(ObjC)/Resources/Info.plist";
@@ -328,6 +357,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Madi-S.Movie-ObjC-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Movie(ObjC)/View Controllers/Movie(ObjC)-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -336,6 +368,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8MJ3MC3A9A;
 				INFOPLIST_FILE = "$(SRCROOT)/Movie(ObjC)/Resources/Info.plist";
@@ -345,6 +378,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Madi-S.Movie-ObjC-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Movie(ObjC)/View Controllers/Movie(ObjC)-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
