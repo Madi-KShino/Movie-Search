@@ -5,7 +5,6 @@
 //  Created by Madison Kaori Shino on 7/5/19.
 //  Copyright © 2019 Madi S. All rights reserved.
 //
-
 #import "MKSMovie.h"
 
 //STRINGS FOR KEYS
@@ -18,7 +17,7 @@ static NSString * const ratingKey = @"vote_average";
 //INITIALIZE MOVIE PROPERTIES
 @implementation MKSMovie
 
-- (instancetype)initMovieWithTitle:(NSString *)movieTitle movieDate:(NSString *)movieDate movieSummary:(NSString *)movieSummary movieImage:(NSString *)movieImage movieRating:(NSNumber *)movieRating
+- (instancetype)initMovieWithTitle:(NSString *)movieTitle movieDate:(NSString *)movieDate movieSummary:(NSString *)movieSummary movieImage:(NSString *)movieImage movieRating:(float)movieRating
 {
     self = [super init];
     if (self)
@@ -43,7 +42,13 @@ static NSString * const ratingKey = @"vote_average";
     NSString *date = dictionary[dateKey];
     NSString *summary = dictionary[summaryKey];
     NSString *image = dictionary[imageKey];
-    NSNumber *rating = dictionary[ratingKey];
+    float rating = [dictionary[ratingKey]floatValue];
+    
+    //HANDLE OPTIONAL IMAGES
+    if ([image isKindOfClass:[NSNull class]])
+    {
+        image = nil;
+    }
     
     return [self initMovieWithTitle:title movieDate:date movieSummary:summary movieImage:image movieRating:rating];
 }

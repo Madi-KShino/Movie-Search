@@ -10,14 +10,17 @@
 #import <UIKit/UIKit.h>
 #import "MKSMovie.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MKSMovieController : NSObject
 
 //SINGLETON - SHARED INSTANCE
 +(instancetype)sharedInstance;
 
 //CREATE MOVIES (FETCH DATA & IMAGE)
--(void)fetchMovieFromSearch:(NSString *)searchTerm completion:(void (^)(NSArray<MKSMovie *> *movie))completion;
--(void)fetchImageForMovie:(MKSMovie *)movie completion:(void(^) (UIImage *))completion;
+-(void)fetchMovieFromSearch:(NSString *)searchTerm completion:(void (^)(NSArray<MKSMovie *> * _Nullable movie))completion;
+-(void)fetchImageForMovie:(MKSMovie *)movie completion:(void(^) (UIImage * _Nullable))completion;
 
 @end
 
+NS_ASSUME_NONNULL_END

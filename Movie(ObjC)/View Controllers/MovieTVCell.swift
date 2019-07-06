@@ -23,8 +23,7 @@ class MovieTVCell: UITableViewCell {
         dateLabel.text = movieShown.movieDate
         summaryLabel.text = movieShown.movieSummary
         ratingLabel.text = "\(movieShown.movieRating)/10"
-        movieImage.image = nil
-        MKSMovieController.sharedInstance()?.fetchImage(for: movieShown, completion: { (image) in
+        MKSMovieController.sharedInstance().fetchImage(for: movieShown, completion: { (image) in
             DispatchQueue.main.async {
                 self.movieImage.image = image
             }

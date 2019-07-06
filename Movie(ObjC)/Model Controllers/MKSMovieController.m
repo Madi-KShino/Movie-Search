@@ -77,10 +77,16 @@ static NSString * const imageUrlString = @"https://image.tmdb.org/t/p/w500";
       }]resume];
 }
 
-
 //IMPLEMENT FETCH IMAGE
 - (void)fetchImageForMovie:(MKSMovie *)movie completion:(void (^)(UIImage *))completion
 {
+    //HANDLE OPTIONAL IMAGES
+    if (movie.movieImage == nil)
+    {
+        completion(nil);
+        return;
+    }
+    
     //BUILD URL
     NSURL *baseURL = [NSURL URLWithString:imageUrlString];
     NSURL *imageURL = [baseURL URLByAppendingPathComponent:movie.movieImage];

@@ -17,13 +17,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, copy) NSString *movieDate;
 @property (nonatomic, readonly, copy) NSString *movieSummary;
 @property (nonatomic, readonly, copy, nullable) NSString *movieImage;
-@property (nonatomic, readonly) NSNumber *movieRating;
+@property (nonatomic, readonly) float movieRating;
 
 -(instancetype)initMovieWithTitle:(NSString *)movieTitle
                         movieDate:(NSString *)movieDate
                      movieSummary:(NSString *)movieSummary
                        movieImage:(NSString *)movieImage
-                      movieRating:(NSNumber *)movieRating;
+                      movieRating:(float)movieRating;
 
 @end
 

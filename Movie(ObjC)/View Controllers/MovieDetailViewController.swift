@@ -32,9 +32,9 @@ class MovieDetailViewController: UIViewController {
             self.dateLabel.text = movie.movieDate
             self.summaryLabel.text = movie.movieSummary
             self.ratingLabel.text = "\(movie.movieRating)/10"
-            MKSMovieController.sharedInstance()?.fetchImage(for: movie, completion: { (image) in
+            MKSMovieController.sharedInstance().fetchImage(for: movie, completion: { (image) in
                 DispatchQueue.main.async {
-                    self.movieImage.image = image
+                    self.movieImage.image = image 
                 }
             })
         }

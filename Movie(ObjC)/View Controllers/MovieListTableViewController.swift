@@ -26,7 +26,7 @@ class MovieListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
-        MKSMovieController.sharedInstance()?.fetchMovie(fromSearch: "Star Wars", completion: { (movie) in
+        MKSMovieController.sharedInstance().fetchMovie(fromSearch: "Star Wars", completion: { (movie) in
             guard let movie = movie else { return }
             self.movies = movie
         })
@@ -63,7 +63,7 @@ extension MovieListTableViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.view .endEditing(true)
         guard let searchText = searchBar.text, searchText != "" else { return }
-        MKSMovieController.sharedInstance()?.fetchMovie(fromSearch: searchText, completion: { (moviesFromCompletion) in
+        MKSMovieController.sharedInstance().fetchMovie(fromSearch: searchText, completion: { (moviesFromCompletion) in
             if let movies = moviesFromCompletion {
                 self.movies = movies
                 DispatchQueue.main.async {
